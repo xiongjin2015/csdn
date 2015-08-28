@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="textcolor_fire_red">#f86400</color>
+    <color name="textcolor_black">#424549</color>
+    <color name="background_actionbar">#8dc487</color>
+    <color name="textcolor_tabpage_main_selected">#f86400</color>
+    <color name="textcolor_tabpage_main">#333333</color>
+
+    <drawable name="background_topbar">#f2f2f2</drawable>
+    <drawable name="background_topbar_divider">#d8d8d8</drawable>
+
+    <color name="nomalGray">#838B83</color>
+    <color name="coffee">#622f1b</color>
+    <color name="wangyibg">#f0f0f0</color>
+    <color name="transparentblack">#88000000</color>
+
+</resources>

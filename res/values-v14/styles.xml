@@ -1,0 +1,54 @@
+<resources>
+
+    <!--
+        Base application theme for API 14+. This theme completely replaces
+        AppBaseTheme from BOTH res/values/styles.xml and
+        res/values-v11/styles.xml on API 14+ devices.
+    -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- API 14 theme customizations can go here. -->
+    </style>
+    
+    
+    <style name="HahaTheme" parent="Theme.AppCompat.Light">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <!-- Action Bar Styles -->
+        <item name="android:actionBarTabStyle">@style/Haha.actionBar.TabView</item>
+        <item name="android:actionBarTabTextStyle">@style/Haha.actionBar.TabText</item>
+        <item name="android:actionBarTabBarStyle">@style/Haha.actionBar.TabBar</item>
+        <item name="android:actionButtonStyle">@style/Haha.actionBar.buttonStyle</item>
+        <item name="android:actionBarStyle">@style/Haha.Light.ActionBar</item>
+        <item name="android:homeAsUpIndicator">@drawable/abc_ic_ab_back_holo_light</item>
+
+        <!--  -->
+        <item name="actionBarTabStyle">@style/Haha.actionBar.TabView</item>
+        <item name="actionBarTabTextStyle">@style/Haha.actionBar.TabText</item>
+        <item name="actionBarTabBarStyle">@style/Haha.actionBar.TabBar</item>
+        <item name="actionButtonStyle">@style/Haha.actionBar.buttonStyle</item>
+        <item name="actionBarStyle">@style/Haha.Light.ActionBar</item>
+        <item name="homeAsUpIndicator">@drawable/abc_ic_ab_back_holo_light</item>
+        <!--
+        <item name="android:actionBarSize">@dimen/abc_action_bar_default_height</item>
+        <item name="actionOverflowButtonStyle">@style/Widget.AppCompat.Light.ActionButton.Overflow</item>
+        <item name="android:actionBarTabBarStyle">@style/Widget.AppCompat.Light.ActionBar.TabBar</item>
+        <item name="actionBarSplitStyle">?attr/actionBarStyle</item>
+        <item name="actionBarWidgetTheme">@null</item>
+        <item name="actionBarDivider">?attr/dividerVertical</item>
+        <item name="actionBarItemBackground">?attr/selectableItemBackground</item>
+        <item name="actionMenuTextAppearance">@style/TextAppearance.AppCompat.Widget.ActionBar.Menu</item>
+        <item name="actionMenuTextColor">?android:attr/textColorPrimaryDisableOnly</item>
+        -->
+    </style>
+
+    <style name="Haha.Light.ActionBar" parent="@style/Haha.Light.Base.ActionBar">
+        <item name="android:background">@color/background_actionbar</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.Holo.Widget.ActionBar.Title.Haha</item>
+        <item name="titleTextStyle">@style/TextAppearance.Holo.Widget.ActionBar.Title.Haha</item>
+    </style>
+
+    <style name="TextAppearance.Holo.Widget.ActionBar.Title.Haha" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+</resources>
