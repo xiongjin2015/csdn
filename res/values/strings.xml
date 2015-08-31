@@ -2,5 +2,9 @@
 <resources>
 
     <string name="app_name">CSDN</string>
+    <string name="share_to_friends">好友推荐</string>
+    <string name="share_to_friends_content">我正在使用CDSN手机版看业界最新资讯，推荐给你%1$s</string>
+    <string name="action_settings">设置</string>
+    <string name="action_share">分享</string>
 
 </resources>

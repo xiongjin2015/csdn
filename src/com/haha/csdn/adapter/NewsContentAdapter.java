@@ -154,10 +154,10 @@ public class NewsContentAdapter extends BaseAdapter {
                     holder.mTextView.setText(news.getSummary());
                     break;
                 case NewsType.CONTENT:
-                    holder.mTextView.setText("\u3000\u3000" + Html.fromHtml(news.getContent()));
+                    holder.mTextView.setText("\u3000" + Html.fromHtml(news.getContent()));
                     break;
                 case NewsType.BOLD_TITLE:
-                    holder.mTextView.setText("\u3000\u3000" + Html.fromHtml(news.getContent()));
+                    holder.mTextView.setText("\u3000" + Html.fromHtml(news.getContent()));
                 default:
 
                     // holder.mTextView.setText(Html.fromHtml(item.getContent(),

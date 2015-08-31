@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBar;
 import android.view.MotionEvent;
 
 import com.haha.csdn.R;
+import com.umeng.analytics.AnalyticsConfig;
 
 public class StartActivity extends HaBaseActionBarActivity {
     
@@ -31,6 +32,8 @@ public class StartActivity extends HaBaseActionBarActivity {
                 finish();
             }
         }, 1000);
+        
+        //AnalyticsConfig.setChannel(String channel);
     }
     
     @Override

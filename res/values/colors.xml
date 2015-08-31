@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <drawable name="start_bg">#f7f7f7</drawable>
+    
     <color name="textcolor_fire_red">#f86400</color>
     <color name="textcolor_black">#424549</color>
     <color name="background_actionbar">#8dc487</color>
@@ -14,5 +16,8 @@
     <color name="coffee">#622f1b</color>
     <color name="wangyibg">#f0f0f0</color>
     <color name="transparentblack">#88000000</color>
+    
+    <color name="personal_list_item_divider">#e8e8e8</color>
+    <color name="personal_list_item_press">#33e0e0e0</color>
 
 </resources>

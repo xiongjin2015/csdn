@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="personal_items">
+        <item>意见反馈</item>
+        <item>升级</item>
+        <item>分享给好友</item>
+    </string-array>
+
+</resources>

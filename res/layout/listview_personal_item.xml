@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="5dip" >
+
+    <TextView
+        android:id="@+id/listitem_personal"
+        android:layout_width="wrap_content"
+        android:layout_height="48dip" 
+        android:drawablePadding="@dimen/textview_image_padding"
+        android:gravity="center_vertical"
+        android:textColor="#5e5e5e"
+        android:textSize="16sp" />
+
+</LinearLayout>

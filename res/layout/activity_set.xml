@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/start_bg"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingTop="5dip" >
+
+    <ListView
+        android:id="@+id/view_main_pesonal_listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/personal_list_item_divider"
+        android:dividerHeight="1.0dip"
+        android:listSelector="@drawable/selector_personal_listitem" />
+
+</RelativeLayout>

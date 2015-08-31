@@ -9,6 +9,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Looper;
 import android.support.v7.app.ActionBar;
+import android.util.Log;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,15 +20,18 @@ import android.widget.Toast;
 
 import com.haha.csdn.R;
 import com.haha.csdn.adapter.NewsContentAdapter;
+import com.haha.csdn.utils.Constiant;
 import com.haha.splider.bean.News;
 import com.haha.splider.manager.NewsManager;
 
 public class NewsContentActivity extends HaBaseActionBarActivity implements OnItemClickListener {
-
+    
+    private final static String TAG = "NewsContentActivity";
     private XListView mListView;
 
     // 该页面的url
     private String url;
+    private String title;
     private NewsManager mNewsManager;
     private List<News> mDatas;
 
@@ -43,6 +48,7 @@ public class NewsContentActivity extends HaBaseActionBarActivity implements OnIt
         mNewsManager = new NewsManager();
 
         url = getIntent().getStringExtra("url");
+        title = getIntent().getStringExtra("title");
 
         mAdapter = new NewsContentAdapter(this);
 
@@ -67,15 +73,40 @@ public class NewsContentActivity extends HaBaseActionBarActivity implements OnIt
     }
     
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.news_content, menu);
+        return true;
+    }
+    
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
         case android.R.id.home:
             back();
             break;
+        case R.id.action_share:
+            shareToFriends();
+            break;
         default:
             break;
         }
         return super.onOptionsItemSelected(item);
+    }
+    
+    private void shareToFriends() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_SEND);
+            intent.setType("text/plain");
+            intent.putExtra(Intent.EXTRA_SUBJECT,
+                    getString(R.string.share_to_friends));
+            intent.putExtra(Intent.EXTRA_TEXT, "来自CSDN:"+title+":"+url+"["+getString(
+                    R.string.share_to_friends_content, Constiant.UPDATE_URL)+"]");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(Intent.createChooser(intent, getTitle()));
+        } catch (Exception e) {
+            Log.e(TAG, "error:", e);
+        }
+
     }
 
 

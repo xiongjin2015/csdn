@@ -1,6 +1,7 @@
 
 package com.haha.csdn.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import com.haha.csdn.R;
 import com.haha.csdn.adapter.TabAdapter;
 import com.haha.csdn.widget.TabPageIndicator;
+import com.umeng.update.UmengUpdateAgent;
 
 public class MainActivity extends HaBaseActionBarActivity {
 
@@ -23,6 +25,7 @@ public class MainActivity extends HaBaseActionBarActivity {
         setContentView(R.layout.activity_main);
         initActionBar();
         initView();
+        UmengUpdateAgent.update(this);
     }
     
     private void initView() {
@@ -53,10 +56,12 @@ public class MainActivity extends HaBaseActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-//        int id = item.getItemId();
-//        if (id == R.id.action_settings) {
-//            return true;
-//        }
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this,SetActivity.class);
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 }

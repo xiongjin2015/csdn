@@ -8,6 +8,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 
 import com.haha.csdn.utils.HaAppInfo;
+import com.umeng.analytics.MobclickAgent;
 
 public class HaBaseActionBarActivity extends ActionBarActivity {
     
@@ -22,13 +23,13 @@ public class HaBaseActionBarActivity extends ActionBarActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        //MobclickAgent.onResume(this);
+        MobclickAgent.onResume(this);
     }
     
     @Override
     protected void onPause() {
         super.onPause();
-        //MobclickAgent.onPause(this);
+        MobclickAgent.onPause(this);
     }
     
 

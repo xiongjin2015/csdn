@@ -107,6 +107,7 @@ public class MainFragment extends Fragment implements IXListViewRefreshListener,
         NewsItem newsItem = mDatas.get(position-1);
         Intent intent = new Intent(getActivity(),NewsContentActivity.class);
         intent.putExtra("url",newsItem.getLink());
+        intent.putExtra("title",newsItem.getTitle());
         startActivity(intent);
     }
     
